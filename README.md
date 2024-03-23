@@ -1,21 +1,29 @@
 # ddev-core-dev
 
-This is a DDEV addon for doing Drupal core development.
+This is a DDEV addon for doing Drupal core development. 
 
-```
+It assumes you already have [DDEV](https://ddev.com/) and [Docker](https://www.docker.com/products/docker-desktop/) installed, and are familiar with using `git` to clone code repos via the command line.
+
+```bash
 git clone https://git.drupalcode.org/project/drupal.git drupal
 cd drupal
 ddev config --project-type=drupal10
 ddev start
+ddev exec corepack enable
+ddev exec yarn set version stable
 ddev get justafish/ddev-drupal-core-dev
 ddev restart
+rm -rf sites/default/files && rm -f sites/default/settings.php
 ddev composer install
+
+# Install Drupal (site will be available at https://drupal.ddev.site)
+ddev drupal install
+
+# Install Drush (recommended, use with `ddev drush <command>`)
+ddev composer require drush/drush && ddev composer install
 
 # See included commands
 ddev drupal list
-
-# Install drupal
-ddev drupal install
 
 # Run PHPUnit tests
 ddev phpunit core/modules/sdc
