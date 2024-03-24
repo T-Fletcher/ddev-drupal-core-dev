@@ -10,7 +10,7 @@ cd drupal
 ddev config --project-type=drupal10
 ddev start
 ddev exec corepack enable
-ddev exec yarn set version stable
+ddev yarn set version stable
 ddev get justafish/ddev-drupal-core-dev
 ddev restart
 rm -rf sites/default/files && rm -f sites/default/settings.php
