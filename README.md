@@ -2,7 +2,7 @@
 
 This is a DDEV addon for doing Drupal core development. 
 
-It assumes you already have [DDEV](https://ddev.com/) and [Docker](https://www.docker.com/products/docker-desktop/) installed, and are familiar with using `git` to clone code repos via the command line.
+It assumes you already have [DDEV](https://ddev.com/) and [a Docker provider](https://ddev.readthedocs.io/en/stable/users/install/docker-installation/) installed, and are familiar with using `git` to clone code repos via the command line.
 
 ```bash
 git clone https://git.drupalcode.org/project/drupal.git drupal
