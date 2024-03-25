@@ -9,7 +9,6 @@ git clone https://git.drupalcode.org/project/drupal.git drupal
 cd drupal
 ddev config --project-type=drupal10 --omit-containers=db --docroot="" --php-version=8.3 --disable-settings-management --nodejs-version=20
 ddev start
-ddev exec corepack enable
 ddev get justafish/ddev-drupal-core-dev
 ddev restart
 rm -f sites/default/files/.sqlite
@@ -17,8 +16,6 @@ ddev composer install
 
 # Install Drupal (site will be available at https://drupal.ddev.site)
 ddev drupal install
-
-ddev composer require drush/drush && ddev composer install
 
 # See included commands
 ddev drupal list
