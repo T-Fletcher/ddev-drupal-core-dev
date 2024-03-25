@@ -7,7 +7,7 @@ It assumes you already have [DDEV](https://ddev.com/) and [a Docker provider](ht
 ```bash
 git clone https://git.drupalcode.org/project/drupal.git drupal
 cd drupal
-ddev config --project-type=drupal10
+ddev config --project-type=drupal10 --omit-containers=db --docroot="" --php-version=8.3 --disable-settings-management --nodejs-version=20
 ddev start
 ddev exec corepack enable
 ddev yarn set version stable
