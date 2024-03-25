@@ -10,7 +10,6 @@ cd drupal
 ddev config --project-type=drupal10 --omit-containers=db --docroot="" --php-version=8.3 --disable-settings-management --nodejs-version=20
 ddev start
 ddev exec corepack enable
-ddev yarn set version stable
 ddev get justafish/ddev-drupal-core-dev
 ddev restart
 rm -rf sites/default/files && rm -f sites/default/settings.php
