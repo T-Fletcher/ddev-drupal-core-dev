@@ -18,7 +18,6 @@ ddev composer install
 # Install Drupal (site will be available at https://drupal.ddev.site)
 ddev drupal install
 
-# Install Drush (recommended, use with `ddev drush <command>`)
 ddev composer require drush/drush && ddev composer install
 
 # See included commands
