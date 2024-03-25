@@ -12,7 +12,7 @@ ddev start
 ddev exec corepack enable
 ddev get justafish/ddev-drupal-core-dev
 ddev restart
-rm -rf sites/default/files && rm -f sites/default/settings.php
+rm -f sites/default/files/.sqlite
 ddev composer install
 
 # Install Drupal (site will be available at https://drupal.ddev.site)
